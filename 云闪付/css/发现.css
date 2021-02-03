@@ -1,0 +1,258 @@
+html{
+    font-size: 26.67vw;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 头部 */
+header{
+    width: 100%;
+    height: 1.58rem;
+    /* background-color: cadetblue; */
+    background: linear-gradient(to right, #FE6658, #EC1820);
+    border-radius: 0rem 0rem 0.2rem 0.2rem;
+}
+header .box1{
+    width: 100%;
+    height: 0.5rem;
+    /* background-color: pink; */
+    display: flex;
+    font-size: 0.13rem;
+    justify-content: space-around;
+    align-items: center;
+}
+.box1 span{
+    /* font-size: 0.13rem; */
+    color: #fff;
+}
+.box1 input{
+    width: 2.31rem;
+    height: 0.36rem;
+    background: url(../images/sousuo.png)no-repeat 0.15rem center;
+    background-size: 0.2rem 0.2rem;/*改变图标的大小*/
+    border-radius: 0.15rem 0.02rem 0.2rem 0.15rem;
+    outline: none;/*清楚表单的默认样式*/
+    font-size: 0.13rem;
+    text-indent: 0.47rem;
+    border: 1px solid #ececec;
+    box-sizing: border-box;
+    background-color: #ececec
+} 
+header .box1 i{
+    font-size: 0.21rem !important;/*图标的大小以及颜色*/
+     color: #fff;
+     width: 0.21rem;
+     height: 0.21rem;
+}
+input::-webkit-input-placeholder {
+    color: #CBCBCB;
+  
+}
+/* box2功能区 */
+header .box2{
+    width: 100%;
+    height: 1.10rem;
+    /* font-size: 0.13rem; */
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.23rem;
+    
+}
+.box2 p{
+    width: 25%;
+    height: 0.68rem;
+    font-size: 0.13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+header .box2 p img {
+    height: 0.43rem;
+    width: 0.43rem;
+}
+/* ******************头部结束*************************** */
+
+/* 主体部分 */
+main{
+    width: 100%;
+    flex: 1;
+    background-color: #fff;
+    overflow: auto;
+}
+/* 主体功能区域 */
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+main .nav{
+    width: 100%;
+    height: 1.75rem;
+    font-size: 0.11rem;
+    display: flex;
+     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+   flex-wrap: wrap;
+}
+.nav p{
+    width: 20%;
+    font-size: 0.11rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav p img{
+    width: 0.42rem;
+    height: 0.42rem;
+}
+.nav span{
+    font-size: 0.13rem;
+    color: #333333;
+    margin-top: 0.09rem;
+} 
+/* banner图 */
+main section .banner {
+    height: 1rem;
+    display: flex;
+    margin: auto;
+}
+
+main section .banner img {
+    width: 3.39rem;
+    border-radius: 0.1rem;
+}
+/* 背景图 */
+main section .beijing{
+    width: 100%;
+    height: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.beijing p{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0.5rem 0; */
+}
+main .beijing p img {
+    width: 0.8rem;
+    height:0.8rem;
+}
+/* **************热门推荐***************** */
+main section .remen p{
+    width: 100%;
+    height: 0.30rem;
+    color: #373737;
+    font-size: 0.2rem;
+    line-height: 0.30rem;
+    margin-left: 0.2rem;
+    font-weight: bold
+}
+main section .remen{
+    width: 100%;
+    height: 0.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    margin: 0.03rem 0;
+}
+main section .legou{
+    width: 100%;
+    height: 1.8rem;
+    /* background-color: #FE6658; */
+    margin-top: 0.1rem;
+}
+main section .legou .left{
+   float: left;
+   width: 1.22rem;
+   height: 1.8rem;
+}
+main section .left img{
+    width: 1.22rem;
+    height: 0.82rem;
+    margin-top: -0.78rem
+ }
+ main section .legou .right{
+   /* background-color: skyblue; */
+   float: right;
+   width: 2.4rem;
+   height: 1.8rem;
+   line-height: 0.3rem;
+ }
+ main section .legou .right p{
+    font-size: 0.20rem;
+    color: #000000;
+  }
+  main section .legou .right .chaoshi{
+    height: 0.25rem;
+    /* background-color: blueviolet; */
+    line-height: 0.25rem;
+  }
+  main section .chaoshi span{
+    font-size: 0.20rem;
+    color: #676767;
+    float: left;
+  }
+  main section .chaoshi i{
+    font-size: 0.15rem;
+    color: #676767;
+    float: right;
+  }
+  main section .right span{
+    font-size: 0.14rem;
+    color: #676767;
+    padding: 0 0.05rem;
+    /* background-color: #676767; */
+    /* text-indent: 0.10rem; */
+  }
+  main section .legou .right h6{
+    font-size: 0.16rem;
+    color: #676767;
+  }
+/* **********************底部导航****************/           
+     footer {
+        width: 100%;
+        height: 0.5rem;
+        background: #fff;
+        font-size: 0.1rem;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 0.1rem;
+    }
+    
+    footer p i {
+        padding: 0 0.1rem !important;
+        font-size: 0.25rem !important;
+    }
+    
+    footer p {
+        width: 25%;
+        height: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    footer p:hover,footer p:focus {
+        color: red;
+    }
+ 
