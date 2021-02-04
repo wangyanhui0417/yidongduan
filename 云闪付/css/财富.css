@@ -183,3 +183,6 @@ footer p {
 footer p:hover,footer p:focus {
     color: red;
 }
+footer a {
+    color: #000;
+ }

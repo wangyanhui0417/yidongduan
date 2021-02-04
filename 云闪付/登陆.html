@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    html{
+    font-size: 26.67vw;
+    }
+    html,body{
+    width: 100%;
+    height: 100%;
+    }
+    body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+    /* 头部 */
+    header{
+    width: 100%;
+    height: 1.8rem;
+    /* background-color: cadetblue; */
+    background: linear-gradient(to right, #FE6658, #EC1820);
+    /* border-radius: 0rem 0rem 0.2rem 0.2rem; */
+    }
+    .biaoti{
+        font-size: 0.26rem;
+        position: relative;
+        left: 15%;
+        top: 40%;
+        /* transform: translate() */
+        /* font-size: 0.20rem; */
+        color: #f8ffff;
+    }
+    .biaoti span{
+        font-size: 0.30rem;
+        color: #eccf9d;
+        padding: 0 0.1rem;
+        font-weight: bolder
+    }
+    main{
+        background-color:#ededed;
+        position: relative;
+    }
+    .box{
+        width: 3.2rem;
+        height: 2.5rem;
+        background-color: skyblue;
+        /* background-color:rgba(0, 0, 0, .2); */
+        margin:  0 auto;
+        position: absolute;
+        top: -0.20rem;
+        left: 0.20rem;
+        border-radius: 0.10rem;
+    }
+    .box div{
+        width: 1.5rem;
+        height: 0.2rem;
+        line-height: 0.05rem;
+        margin: 0 auto
+    }
+    #username,#password{
+	width: 1.8rem;
+	height: 0.25rem;
+	padding-left: 0.1rem;
+	border-radius: 3px;
+    border: 1px solid #999999;
+    }
+    #login{
+    width: 1.8rem;
+	height: 0.25rem;
+    font-size: 0.09rem;
+    background-color: #ff9b19;
+    border: none;
+    color: white;
+    border-radius: 0.08rem;
+    /* margin-bottom: 20px; */
+    }
+    .box p{
+        width: 2.5rem;
+        height: 0.3rem;
+        /* line-height: 0.05rem; */
+        /* margin: 0 auto */
+        font-size: 0.18rem;
+        position: relative;
+        top: 1.4rem;
+        left: 0.9rem
+    }
+    .box a{
+       color: #EC1820
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="biaoti">
+           <i> <span>欢迎</span>来到云闪付</i>
+        </div>
+    </header>
+    <!-- 主体内容 -->
+    <main>
+        <div class="box">
+            <div>
+                <input type="text" id="username" placeholder="请输入账号">
+                <input type="password" id="password" placeholder="请输入密码">
+                <button id="login">立即登录</button>
+            </div>
+            <p>没有账户吗？<a href="注册.html">去注册</a></p>
+        </div>
+    </main>
+</body>
+</html>
+
+<script src="js/jquery.min.js"></script>
+	<script>
+	$("#login").click(function(){
+    let http = new XMLHttpRequest()
+    http.open("get",`http://192.168.2.180:8080/denglu?username=${$("#username").val()}&password=${$("#password").val()}`)
+    http.send()
+    http.onreadystatechange = function(){
+        if(http.readyState===4){
+			if(http.responseText==="success"){
+				alert("登陆成功~")
+				location.href = "http://192.168.2.180/云闪付/首页.html"
+			}else{
+				alert("登陆失败~ 用户名或者密码错误")
+			}
+        }
+    }
+})
+</script>

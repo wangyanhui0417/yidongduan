@@ -201,7 +201,9 @@ main section .remen .wenben{
         justify-content: center;
         align-items: center;
     }
-    
+    footer a {
+       color: #000;
+    }
     footer p:hover,footer p:focus {
         color: red;
     }
